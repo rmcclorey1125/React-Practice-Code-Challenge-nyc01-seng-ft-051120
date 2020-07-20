@@ -4,13 +4,20 @@ import Sushi from '../components/Sushi'
 
 const SushiContainer = (props) => {
   console.log(props.sushis)
+
+  // const moreClickHandler = () => {
+  //   // props.numOfSushi = props.numOfSushi + 4
+  // }
+
+  const fourSushi = props.sushis.slice(0,props.numOfSushi).map(sushi => <Sushi key={sushi.id} {...sushi}/>)
+
   return (
     <Fragment>
       <div className="belt">
         {
-          props.sushis.map(sushi => <Sushi key={sushi.id} {...sushi}/>)
+          fourSushi
         }
-        <MoreButton />
+        <MoreButton onClick={props.showMoreSushi}/>
       </div>
     </Fragment>
   )

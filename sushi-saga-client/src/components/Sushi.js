@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react'
 
 const Sushi = (props) => {
+
+  // onClickBuy = () => {
+    
+  // }
+
   return (
     <div className="sushi">
       <div className="plate" 
-           onClick={/* Give me a callback! */ null}>
+           onClick={/* onClickBuy */ null}>
         { 
           /* Tell me if this sushi has been eaten! */ 
           false ?
